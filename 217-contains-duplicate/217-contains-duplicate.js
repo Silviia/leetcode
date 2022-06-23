@@ -5,6 +5,7 @@
 var containsDuplicate = function(nums) {
     const map = {};
     let containsDuplicates = false;
+    
     for (let i = 0; i < nums.length; i ++) {
         let val = nums[i]; 
         if (!map[val]) 
@@ -14,5 +15,6 @@ var containsDuplicate = function(nums) {
             break;
         }
     }
+    
     return containsDuplicates;
 };

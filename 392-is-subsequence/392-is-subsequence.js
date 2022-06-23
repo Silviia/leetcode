@@ -1,0 +1,26 @@
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isSubsequence = function(s, t) {
+    if (s.length === 0)
+        return true;
+    
+    if (s.length > t.length)
+        return false;
+    
+    let i = 0, j = 0;
+    while (i < s.length && j < t.length) {
+        if (s.charAt(i) === t.charAt(j)) {
+            i ++;
+            j ++;
+        } else 
+            j ++;
+        
+        if (i === s.length) 
+            return true;
+    }
+    
+    return false;
+};

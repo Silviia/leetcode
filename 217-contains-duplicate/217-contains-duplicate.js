@@ -3,11 +3,16 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    const numsWithNoDuplicates = nums.reduce(function (previous, current) {
-        if (previous.indexOf(current) === -1 ) 
-            previous.push(current);
-        return previous;
-    }, []);
-    
-    return numsWithNoDuplicates.length !== nums.length; 
+    const map = {};
+    let containsDuplicates = false;
+    for (let i = 0; i < nums.length; i ++) {
+        let val = nums[i]; 
+        if (!map[val]) 
+            map[val] = 1;
+        else {
+            containsDuplicates = true;
+            break;
+        }
+    }
+    return containsDuplicates;
 };

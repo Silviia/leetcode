@@ -32,8 +32,9 @@ var addTwoNumbers = function(l1, l2) {
         sum = sum > 9 ? 1 : 0;
     }
         
-    if (sum)
+    if (sum) {
         current.next = new ListNode(sum);
+    }
     
     return result.next;
 };

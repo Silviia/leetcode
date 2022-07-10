@@ -23,9 +23,9 @@ var solution = function(isBadVersion) {
         while (left < right) {
             let pivot = Math.floor((left + right) / 2);
             
-            if (isBadVersion(pivot))
+            if (isBadVersion(pivot)) {
                 right = pivot;
-            else
+            } else
                 left = pivot + 1;
         }
         

@@ -1,5 +1,7 @@
 /**
  * Use an additional array - position in new array will be (i+k)%nums.length
+ * Time complexity O(n) 
+ * Space complexity O(n) for the new array
  * @param {number[]} nums
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.

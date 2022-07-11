@@ -1,4 +1,5 @@
 /**
+ * Use binary search to find the largest index for which arr[i] < arr[i+1]
  * @param {number[]} arr
  * @return {number}
  */

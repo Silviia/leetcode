@@ -1,4 +1,26 @@
 /**
+ * Fibonacci aproach keeping 3 variables only. Break the problem into subproblems.
+ * Optimal solution can be constructed efficiently from optimal solution to its subproblems.
+ * Time O(n) and space complexity O(1) [ single loop and constant space]
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    if (n === 1)
+        return 1;
+    
+    let first = 1, second = 2, third;
+    for (let i = 3; i <= n; i ++) {
+        third = first + second;
+        first = second;
+        second = third;
+    }
+    
+    return third;
+};
+
+
+/**
  * Dynamic Programming. Break the problem into subproblems.
  * Optimal solution can be constructed efficiently from optimal solution to its subproblems.
  * Time and space complexity: O(n) [ single loop and an array of size n is used]

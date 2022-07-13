@@ -3,20 +3,20 @@
  * @return {number}
  */
 var arraySign = function(nums) {
-    let p = 1;
+    let sign = 1;
     let countNeg = 0;
     
     for (let i = 0; i < nums.length; i ++) {
-        if (nums[i] === 0)
-            return 0;
+        if (nums[i] === 0) {
+            sign = 0;
+            break;
+        }
         
         if (nums[i] < 0) 
-            countNeg++;
+            sign = -sign;
     }
- 
-    p = (countNeg % 2 === 1) ? -1 : 1;
     
-    return signFunc(p);
+    return signFunc(sign);
 };
 
 function signFunc(x) {

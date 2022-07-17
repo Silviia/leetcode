@@ -5,9 +5,8 @@
  */
 var countOdds = function(low, high) {
     let count = Math.floor((high - low) / 2);
-    
-    if (low % 2 === 1 || high % 2 === 1)
+    if (low % 2 === 1 || high % 2 === 1) {
         count += 1;
-    
+    }
     return count;
 };

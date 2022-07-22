@@ -1,4 +1,3 @@
-const cache = {0: 0, 1: 1};
 
 /**
  * Top-down approach using memoization, time, space complexity O(n)
@@ -6,6 +5,7 @@ const cache = {0: 0, 1: 1};
  * @return {number}
  */
 var fib = function(n) {
+    const cache = {0: 0, 1: 1};
     if (n <= 1)
         return n;
     

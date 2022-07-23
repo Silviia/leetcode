@@ -7,6 +7,7 @@
  * }
  */
 /**
+ * Using DFS with recursion. 
  * @param {TreeNode} root
  * @return {number}
  */

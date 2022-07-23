@@ -7,10 +7,32 @@
  */
 
 /**
+ * Solution using Floyd's algorithm
  * @param {ListNode} head
  * @return {boolean}
  */
 var hasCycle = function(head) {
+    let slow = head;
+    let fast = head;
+    
+    while(fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow === fast) {
+            return true;
+        }
+    }
+    
+    return false;
+};
+
+
+/**
+ * Solution using a set
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var hasCycleSet = function(head) {
     const visited = new Set();
     
     while(head != null) {

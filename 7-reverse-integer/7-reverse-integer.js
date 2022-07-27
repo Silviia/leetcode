@@ -7,7 +7,7 @@ var reverse = function(x) {
     var minInteger = (-(Math.pow(2, 31)));
     let revX = 0;
     
-    while(x != 0) {
+    while(x !== 0) {
         let digit = x % 10;
         x = x / 10 >> 0;
         

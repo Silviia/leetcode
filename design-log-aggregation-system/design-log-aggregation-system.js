@@ -58,7 +58,6 @@ LogAggregator.prototype.getLogsOfService = function(serviceId) {
  */
 LogAggregator.prototype.search = function(serviceId, searchString) {
     const result = [];
-    const serviceLogs = Object.values(this.serviceLogs[serviceId]);
     for(const message of this.serviceLogs[serviceId].values()) {
         if (message.includes(searchString)) {
             result.push(message);

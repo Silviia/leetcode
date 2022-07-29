@@ -10,16 +10,24 @@ var rob = function(nums) {
         return 0;
     }
     
-    let robNext = nums[n - 1];
-    let robNextPlusOne = 0;
-    
-    // Dynamic programming calculation - no need for table
-    // Just using two variables will suffice
-    for (let i = n - 2; i >= 0; i -= 1) {
-        let current = Math.max(robNext, robNextPlusOne + nums[i]);
-        robNextPlusOne = robNext;
-        robNext = current;
+    let value1 = nums[0];
+    if (n === 1) {
+        return value1;
     }
     
-    return robNext;
+    let value2 = Math.max(nums[0], nums[1]);
+    if (n === 2) {
+        return value2;
+    }
+    
+    let maxVal = 0;
+    // Dynamic programming calculation - no need for table
+    // Just using two variables will suffice
+    for (let i = 2; i < n; i += 1) {
+        maxVal = Math.max(nums[i] + value1, value2);
+        value1 = value2;
+        value2 = maxVal;
+    }
+    
+    return maxVal;
 };

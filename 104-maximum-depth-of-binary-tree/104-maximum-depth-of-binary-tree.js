@@ -7,7 +7,8 @@
  * }
  */
 /**
- * Using DFS with recursion. 
+/**
+ * Recursive solution
  * @param {TreeNode} root
  * @return {number}
  */
@@ -18,6 +19,6 @@ var maxDepth = function(root) {
         let leftHeight = maxDepth(root.left);
         let rightHeight = maxDepth(root.right);
         
-        return 1 + Math.max(leftHeight, rightHeight);
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 };

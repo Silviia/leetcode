@@ -19,15 +19,13 @@ Solution.prototype.reset = function() {
  * @return {number[]}
  */
 Solution.prototype.shuffle = function() {
-    // Get an array copy 
-    const aux = [...this.array]; // creating a shallow copy - is safe since we are not dealing with multidimensional arrays
-    const set = new Set();
+    // Get an array copy - creating a shallow copy this way - is safe since we are not dealing with multidimensional arrays
+    const aux = [...this.array];
     for (let i = 0; i < this.array.length; i += 1) {
         let removeIdx = Math.floor(Math.random() * aux.length);
         this.array[i] = aux[removeIdx];
         aux.splice(removeIdx, 1);
     }
-    
     return this.array;
 };
 

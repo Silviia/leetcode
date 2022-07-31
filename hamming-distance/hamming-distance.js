@@ -9,7 +9,7 @@ var hammingDistance = function(x, y) {
     
     while (xOr !== 0) {
         distance += 1;
-        // remove the rightmost bit of '1'
+        // Remove the rightmost bit of '1'
         xOr = xOr & (xOr - 1);
     }
     
